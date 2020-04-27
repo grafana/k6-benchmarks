@@ -302,10 +302,10 @@
             });
             var checkRes = Object(k6__WEBPACK_IMPORTED_MODULE_2__["check"])(res, {
                 "Homepage body size is 11026 bytes": function HomepageBodySizeIs11026Bytes(r) {
-                    return r.body.length === 11026;
+                    return r.status === 200 && r.body.length === 11026;
                 },
                 "Homepage welcome header present": function HomepageWelcomeHeaderPresent(r) {
-                    return r.body.indexOf("Welcome to the k6.io demo site!") !== -1;
+                    return r.status === 200 && r.body.indexOf("Welcome to the k6.io demo site!") !== -1;
                 }
             });
             checkFailureRate.add(!checkRes);
@@ -324,7 +324,7 @@
                 } ] ]);
                 checkRes = Object(k6__WEBPACK_IMPORTED_MODULE_2__["check"])(res[0], {
                     "Is stylesheet 4859 bytes?": function IsStylesheet4859Bytes(r) {
-                        return r.body.length === 4859;
+                        return r.status === 200 && r.body.length === 4859;
                     }
                 });
                 checkFailureRate.add(!checkRes);
@@ -343,7 +343,7 @@
             var res = k6_http__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://test.k6.io/my_messages.php");
             var checkRes = Object(k6__WEBPACK_IMPORTED_MODULE_2__["check"])(res, {
                 "Users should not be auth'd. Is unauthorized header present?": function UsersShouldNotBeAuthDIsUnauthorizedHeaderPresent(r) {
-                    return r.body.indexOf("Unauthorized") !== -1;
+                    return r.status === 200 && r.body.indexOf("Unauthorized") !== -1;
                 }
             });
             checkFailureRate.add(!checkRes);
@@ -356,7 +356,7 @@
             });
             checkRes = Object(k6__WEBPACK_IMPORTED_MODULE_2__["check"])(res, {
                 "is logged in welcome header present": function isLoggedInWelcomeHeaderPresent(r) {
-                    return r.body.indexOf("Welcome, admin!") !== -1;
+                    return r.status === 200 && r.body.indexOf("Welcome, admin!") !== -1;
                 }
             });
             if (checkRes) {

@@ -44,9 +44,10 @@ export default function() {
     group("Front page", function() {
         let res = http.get("http://test.k6.io/?ts=" + Math.round(randomIntBetween(1,2000)), { tags: { name: "http://test.k6.io/?ts=*"}});
 
+
         let checkRes = check(res, {
-            "Homepage body size is 11026 bytes": (r) => r.body.length === 11026,
-            "Homepage welcome header present": (r) => r.body.indexOf("Welcome to the k6.io demo site!") !== -1
+            "Homepage body size is 11026 bytes": (r) => r.status === 200 && r.body.length === 11026,
+            "Homepage welcome header present": (r) => r.status === 200 && r.body.indexOf("Welcome to the k6.io demo site!") !== -1
         });
 
         checkFailureRate.add(!checkRes);
@@ -59,7 +60,7 @@ export default function() {
                 ["GET", "http://test.k6.io/static/js/prisms.js", {}, { tags: { staticAsset: "yes" } }]
             ]);
             checkRes = check(res[0], {
-                "Is stylesheet 4859 bytes?": (r) => r.body.length === 4859,
+                "Is stylesheet 4859 bytes?": (r) => r.status === 200 && r.body.length === 4859,
             });
 
             // Record check failures
@@ -77,7 +78,7 @@ export default function() {
     group("Login", function() {
         let res = http.get("http://test.k6.io/my_messages.php");
         let checkRes = check(res, {
-            "Users should not be auth'd. Is unauthorized header present?": (r) => r.body.indexOf("Unauthorized") !== -1
+            "Users should not be auth'd. Is unauthorized header present?": (r) => r.status === 200 && r.body.indexOf("Unauthorized") !== -1
         });
 
         // Record check failures
@@ -88,7 +89,7 @@ export default function() {
 
         res = http.post("http://test.k6.io/login.php", { login: credentials.username, password: credentials.password, redir: '1' });
         checkRes = check(res, {
-            "is logged in welcome header present": (r) => r.body.indexOf("Welcome, admin!") !== -1
+            "is logged in welcome header present": (r) => r.status === 200 && r.body.indexOf("Welcome, admin!") !== -1
         });
 
         // Record successful logins
