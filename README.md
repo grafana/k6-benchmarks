@@ -1,3 +1,8 @@
+# WIP
+# WIP
+# WIP
+
+
 # Hardware-sizing for large-scale k6 tests
 
 This is WIP
@@ -9,8 +14,6 @@ This is WIP
 
 ## Hardware tweaking
 
-
-
 ```shell
 sysctl -w net.ipv4.ip_local_port_range="1024 65535"
 sysctl -w net.ipv4.tcp_tw_reuse=1
@@ -18,6 +21,25 @@ sysctl -w net.ipv4.tcp_timestamps=1
 ulimit -n 250000
 ```
 
+### Hardware considerations
+
+#### Network
+Network throughput of the machine is an important consideration when running large testruns. Many EC2 machines come with 1Gbit/s connection which may limit the amount of load k6 can generate.
+
+When running the test, you can use `nload -u g` in the terminal to view in real time the amount of network traffic generated. If the traffic is constant at 1Gbit/s, your test is probably limited by the network card. Consider upgrading to a different EC2 instance.
+
+![image](https://user-images.githubusercontent.com/442646/80501039-3e6e1b80-896f-11ea-9fa3-3d97a4a08ffd.png)
+
+In my tests the m5.4x large instance is capped at about 1Gbit/s network throughput on average. Amazon claims that it can do "up to 10Gbit/s". 
+
+TODO: expand
+
+#### CPU
+Unlike many other load testing tools, k6 is heavily multithreaded. It will use all available CPU cores.
+Make there's enough CPU resources to generate traffic and record metrics. We recommend that your average CPU load doesn't exceed 80%. 
+If the CPU runs at 100%, metric data will be skewed, showing much larger response time.
+
+#### Memory
 
 ## k6 execution
 
@@ -52,6 +74,18 @@ let checkRes = check(res, {
     "Homepage body size is 11026 bytes": (r) => r.status === 200 && r.body && r.body.length === 11026
 });
 ```
+
+
+
+
+## Add k6 flags to achieve better performance
+
+### --no-thresholds --no-summary 
+
+k6_new_executors run -o cloud --vus=20000 --duration=10m --compatibility-mode=base --no-thresholds --no-summary scripts/website.es5.js
+
+![image](https://user-images.githubusercontent.com/442646/80499911-d408ab80-896d-11ea-83ad-a4f22adccd75.png)
+
 
 
 ## CPU and memory consumption
@@ -265,6 +299,8 @@ root@m5-4xlarge:/home/ubuntu# while sleep 10; do ps -p `pidof k6_new_executors` 
 ```
 
 
+
+
 #### AWS m5.large
 m5.large has 8GB of Ram and 2 CPU cores.
 
@@ -274,3 +310,6 @@ The website.es5.js script can be executed with 6000VUs at about 5.5GB memory and
 
 Sample test-run: https://app.k6.io/runs/public/dd48df93cfaa4c3dbd74ac205c6686d3
 
+#### AWS m5.4xlarge
+
+![image](https://user-images.githubusercontent.com/442646/80501377-a886c080-896f-11ea-95b8-ecdab853485d.png)
