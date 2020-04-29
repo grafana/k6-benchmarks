@@ -1,1 +1,1 @@
-scripts/website.js
+scripts/super-quick.js

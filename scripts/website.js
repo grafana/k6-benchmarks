@@ -21,7 +21,7 @@ export let options = {
     },
     ext: {
         loadimpact: {
-            name: "Hardware Testing - m5.large --compatibility-mode=extended",
+            name: "EC2 Hardware Testing",
             projectID: 3478725,
         }
     }

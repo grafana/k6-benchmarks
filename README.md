@@ -313,3 +313,23 @@ Sample test-run: https://app.k6.io/runs/public/dd48df93cfaa4c3dbd74ac205c6686d3
 #### AWS m5.4xlarge
 
 ![image](https://user-images.githubusercontent.com/442646/80501377-a886c080-896f-11ea-95b8-ecdab853485d.png)
+
+
+#### File upload - data stress testing.
+
+Special considerations must be taken when testing file-uploads. 
+
+#### Network throughput
+
+The network throughput of the load-generator machine, as well as the SUT will likely be the bottleneck.
+
+#### Memory
+k6 needs a very significant amount of memory when uploading files, as every VU will hold the file in memory.
+26MB file upload from the `scripts/file-upload.js` test 
+
+#### Data transfer costs
+k6 can upload a large amount data in a very short period of time. Make sure you understand the data transfer costs before commencing a large scale test.
+
+[Outbound Data Transfer is expensive in AWS EC2](https://www.cloudmanagementinsider.com/data-transfer-costs-everything-you-need-to-know/). The price ranges between 0.08 to 0.20 per GB depending on the region. 
+If you use the cheapest region the cost is about $0.080 per GB. Uploading 1TB therefore costs about $80. Long running test can cost several hundreds of dollars in data transfer alone.
+
