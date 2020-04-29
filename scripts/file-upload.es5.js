@@ -78,14 +78,13 @@
     var k6_http__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(k6_http__WEBPACK_IMPORTED_MODULE_0__);
     var k6__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
     var k6__WEBPACK_IMPORTED_MODULE_1___default = __webpack_require__.n(k6__WEBPACK_IMPORTED_MODULE_1__);
-    var binFile = open("./26MB.zip", "b");
+    var data = {
+        file: k6_http__WEBPACK_IMPORTED_MODULE_0___default.a.file(open("./26MB.zip", "b"), "26MB.zip")
+    };
     var options = {
         discardResponseBodies: true
     };
     __webpack_exports__["default"] = function() {
-        var data = {
-            file: k6_http__WEBPACK_IMPORTED_MODULE_0___default.a.file(binFile, "26MB.zip")
-        };
         var res = k6_http__WEBPACK_IMPORTED_MODULE_0___default.a.post("https://pawel.staging.loadimpact.com/my_messages.php", data);
         Object(k6__WEBPACK_IMPORTED_MODULE_1__["sleep"])(1);
     };
