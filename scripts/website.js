@@ -73,7 +73,7 @@ export default function() {
 
     });
 
-    sleep(10);
+    sleep(3);
 
     group("Login", function() {
         let res = http.get("http://test.k6.io/my_messages.php");
@@ -104,5 +104,5 @@ export default function() {
         timeToFirstByte.add(res.timings.waiting, { ttfbURL: res.url });
     });
 
-    sleep(10);
+    sleep(3);
 }

@@ -338,7 +338,7 @@
                 });
             });
         });
-        Object(k6__WEBPACK_IMPORTED_MODULE_2__["sleep"])(10);
+        Object(k6__WEBPACK_IMPORTED_MODULE_2__["sleep"])(3);
         Object(k6__WEBPACK_IMPORTED_MODULE_2__["group"])("Login", function() {
             var res = k6_http__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://test.k6.io/my_messages.php");
             var checkRes = Object(k6__WEBPACK_IMPORTED_MODULE_2__["check"])(res, {
@@ -369,7 +369,7 @@
                 ttfbURL: res.url
             });
         });
-        Object(k6__WEBPACK_IMPORTED_MODULE_2__["sleep"])(10);
+        Object(k6__WEBPACK_IMPORTED_MODULE_2__["sleep"])(3);
     };
 }, function(module, exports, __webpack_require__) {
     "use strict";
