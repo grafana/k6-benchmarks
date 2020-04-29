@@ -1,18 +1,26 @@
-# WIP
-# WIP
-# WIP
+# WIP WIP WIP
 
+This document is work in progress. 
 
 # Hardware-sizing for large-scale k6 tests
 
-This is WIP
+This document explains how to launch a large k6 test on a single machine without the need of distributed execution. 
 
-1. edit main.js (or symlink it)
-2. npm run-script webpack
-3. Your script is in build/script.es5.js
+The common misconception of many load-testers is that distributed-execution (ability to launch a load test on multiple machines) is required to generate large load. This is not the case with k6.
+
+k6 is different from many other load-testing tools in a way it handles hardware resources. A single k6 process will efficiently use all CPU cores on a load-generator machine.
+Single instance of k6 is often enough to generate load of 30.000-40.000 simultaneus users (VUs). This amount of VUs can generate upwards of 0.5M requests per second (RPS). 
+
+Unless you need more than 500.000 requests per second, a single instance of k6 will likely be sufficient for your needs.
+
+Below we will explore what hardware is needed for generating different levels of load.
 
 
-## Hardware tweaking
+## OS finetuning for maximum performance
+
+For the purpose of this demonstration, we are using a Linix (Ubuntu Server) machine. The instructions will be the same for any Linux distribution. This has not been tested on Windows or MacOS.
+
+The following configuration changes are required to allow the k6 instance to use the full networkcapacity of the server.
 
 ```shell
 sysctl -w net.ipv4.ip_local_port_range="1024 65535"
@@ -21,25 +29,33 @@ sysctl -w net.ipv4.tcp_timestamps=1
 ulimit -n 250000
 ```
 
+For quick testing, you can paste these commands in the root terminal window. To make these changes permanent you will have to change configuration files in your distribution. 
+
+
 ### Hardware considerations
 
 #### Network
-Network throughput of the machine is an important consideration when running large testruns. Many EC2 machines come with 1Gbit/s connection which may limit the amount of load k6 can generate.
+Network throughput of the machine is an important consideration when running large testruns. Many AWS EC2 machines come with 1Gbit/s connection which may limit the amount of load k6 can generate.
 
-When running the test, you can use `nload -u g` in the terminal to view in real time the amount of network traffic generated. If the traffic is constant at 1Gbit/s, your test is probably limited by the network card. Consider upgrading to a different EC2 instance.
+When running the test, you can use `iftop` in the terminal to view in real time the amount of network traffic generated. If the traffic is constant at 1Gbit/s, your test is probably limited by the network card. Consider upgrading to a different EC2 instance.
 
 ![image](https://user-images.githubusercontent.com/442646/80501039-3e6e1b80-896f-11ea-9fa3-3d97a4a08ffd.png)
 
-In my tests the m5.4x large instance is capped at about 1Gbit/s network throughput on average. Amazon claims that it can do "up to 10Gbit/s". 
+In my tests the m5.4xlarge instance is capped at about 1Gbit/s network throughput on average. Amazon claims that it can do "up to 10Gbit/s", but that number is not guaranteed. 
 
-TODO: expand
 
 #### CPU
-Unlike many other load testing tools, k6 is heavily multithreaded. It will use all available CPU cores.
-Make there's enough CPU resources to generate traffic and record metrics. We recommend that your average CPU load doesn't exceed 80%. 
-If the CPU runs at 100%, metric data will be skewed, showing much larger response time.
+Unlike many other load testing tools, k6 is heavily multithreaded. It will effectively use all available CPU cores.
+
+The amount of CPU you need depends on your test file (sometimes called test script). 
+Regarless of the test file, you can assume that large tests require significant amount of CPU power. We recommend that you size the machine to have at least 20% idle cycles (up to 80% used by k6, 20% idle). If k6 uses 100% to generate load, it won't have enough CPU to measure the responses correctly. This may result in result metrics to have much larger response time than in reality.
 
 #### Memory
+k6 likes memory, but [it isn't as greedy as other load testing tools](https://k6.io/blog/comparing-best-open-source-load-testing-tools#memory-usage). 
+Memory consumption heavily depend on your test files. To estimate the memory requirement of your test, run the test on your laptop with 100VUs and multiply the consumed memory by the target number of VUs. 
+
+Simple tests will use ~3-5MB per VU. (1000VUs = 3-10GB). 
+Tests that are using file-uploads can consume tens of megabytes per VU.
 
 ## k6 execution
 
@@ -332,4 +348,12 @@ k6 can upload a large amount data in a very short period of time. Make sure you 
 
 [Outbound Data Transfer is expensive in AWS EC2](https://www.cloudmanagementinsider.com/data-transfer-costs-everything-you-need-to-know/). The price ranges between 0.08 to 0.20 per GB depending on the region. 
 If you use the cheapest region the cost is about $0.080 per GB. Uploading 1TB therefore costs about $80. Long running test can cost several hundreds of dollars in data transfer alone.
+
+
+# Script preparation
+
+
+1. edit main.js (or symlink it)
+2. npm run-script webpack
+3. Your script is in build/script.es5.js
 
