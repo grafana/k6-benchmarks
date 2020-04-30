@@ -82,7 +82,13 @@
         file: k6_http__WEBPACK_IMPORTED_MODULE_0___default.a.file(open("./26MB.zip", "b"), "26MB.zip")
     };
     var options = {
-        discardResponseBodies: true
+        discardResponseBodies: true,
+        ext: {
+            loadimpact: {
+                name: "".concat(__ENV.TEST_NAME) || "Data transfer test",
+                projectID: 3478725
+            }
+        }
     };
     __webpack_exports__["default"] = function() {
         var res = k6_http__WEBPACK_IMPORTED_MODULE_0___default.a.post("https://pawel.staging.loadimpact.com/my_messages.php", data);

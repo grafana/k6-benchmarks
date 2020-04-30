@@ -7,7 +7,12 @@ var data = {
 
 export let options = {
 	discardResponseBodies: true,
-
+    ext: {
+        loadimpact: {
+            name: `${__ENV.TEST_NAME}` || "Data transfer test",
+            projectID: 3478725,
+        }
+    }
 };
 
 export default function() {

@@ -79,7 +79,13 @@
     var k6__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
     var k6__WEBPACK_IMPORTED_MODULE_1___default = __webpack_require__.n(k6__WEBPACK_IMPORTED_MODULE_1__);
     var options = {
-        discardResponseBodies: true
+        discardResponseBodies: true,
+        ext: {
+            loadimpact: {
+                name: "".concat(__ENV.TEST_NAME) || "RPS hammering test",
+                projectID: 3478725
+            }
+        }
     };
     __webpack_exports__["default"] = function() {
         for (var i = 0; i < 20; i++) {

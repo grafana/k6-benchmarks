@@ -8,6 +8,12 @@ import { sleep } from "k6";
 
 export let options = {
 	discardResponseBodies: true,
+    ext: {
+        loadimpact: {
+            name: `${__ENV.TEST_NAME}` || "RPS hammering test",
+            projectID: 3478725,
+        }
+    }
 };
 
 export default function() {
