@@ -9,9 +9,9 @@ This document explains how to launch a large k6 test on a single machine without
 The common misconception of many load-testers is that distributed-execution (ability to launch a load test on multiple machines) is required to generate large load. This is not the case with k6.
 
 k6 is different from many other load-testing tools in a way it handles hardware resources. A single k6 process will efficiently use all CPU cores on a load-generator machine.
-Single instance of k6 is often enough to generate load of 30.000-40.000 simultaneus users (VUs). This amount of VUs can generate upwards of 0.5M requests per second (RPS). 
+Single instance of k6 is often enough to generate load of 30.000-40.000 simultaneus users (VUs). This amount of VUs can generate upwards of 300.000 requests per second (RPS). 
 
-Unless you need more than 500.000 requests per second, a single instance of k6 will likely be sufficient for your needs.
+Unless you need more than 100.000-300.000 requests per second, a single instance of k6 will likely be sufficient for your needs.
 
 Below we will explore what hardware is needed for generating different levels of load.
 
@@ -20,7 +20,8 @@ Below we will explore what hardware is needed for generating different levels of
 
 For the purpose of this demonstration, we are using a Linix (Ubuntu Server) machine. The instructions will be the same for any Linux distribution. This has not been tested on Windows or MacOS.
 
-The following configuration changes are required to allow the k6 instance to use the full networkcapacity of the server.
+The following configuration changes are required to allow the k6 instance to use the full network capacity of the server.
+Detailed information about these settings can be found in our [OS Fine tuning article](https://k6.io/docs/misc/fine-tuning-os).
 
 ```shell
 sysctl -w net.ipv4.ip_local_port_range="1024 65535"
@@ -29,16 +30,17 @@ sysctl -w net.ipv4.tcp_timestamps=1
 ulimit -n 250000
 ```
 
-For quick testing, you can paste these commands in the root terminal window. To make these changes permanent you will have to change configuration files in your distribution. 
+For quick testing, you can paste these commands in the root terminal window. To make these changes permanent, refer to the instructions of your Linux distribution.
 
 
 ### Hardware considerations
 
 #### Network
-Network throughput of the machine is an important consideration when running large testruns. Many AWS EC2 machines come with 1Gbit/s connection which may limit the amount of load k6 can generate.
+Network throughput of the machine is an important consideration when running large tests. Many AWS EC2 machines come with 1Gbit/s connection which may limit the amount of load k6 can generate.
 
 When running the test, you can use `iftop` in the terminal to view in real time the amount of network traffic generated. If the traffic is constant at 1Gbit/s, your test is probably limited by the network card. Consider upgrading to a different EC2 instance.
 
+FIXME: better screenshot.
 ![image](https://user-images.githubusercontent.com/442646/80501039-3e6e1b80-896f-11ea-9fa3-3d97a4a08ffd.png)
 
 In my tests the m5.4xlarge instance is capped at about 1Gbit/s network throughput on average. Amazon claims that it can do "up to 10Gbit/s", but that number is not guaranteed. 
@@ -52,7 +54,7 @@ Regarless of the test file, you can assume that large tests require significant 
 
 #### Memory
 k6 likes memory, but [it isn't as greedy as other load testing tools](https://k6.io/blog/comparing-best-open-source-load-testing-tools#memory-usage). 
-Memory consumption heavily depend on your test files. To estimate the memory requirement of your test, run the test on your laptop with 100VUs and multiply the consumed memory by the target number of VUs. 
+Memory consumption heavily depend on your test scenarios. To estimate the memory requirement of your test, run the test on your laptop with 100VUs and multiply the consumed memory by the target number of VUs. 
 
 Simple tests will use ~3-5MB per VU. (1000VUs = 3-10GB). 
 Tests that are using file-uploads can consume tens of megabytes per VU.
@@ -61,9 +63,9 @@ Tests that are using file-uploads can consume tens of megabytes per VU.
 
 `k6 run -o cloud --vus=20000 --duration=10m --compatibility-mode=base scripts/website.es5.js `
 
-### Preliminary Notes
+## General advice for running large tests.
 
-### General advice for running large tests.
+### Make your test code resilient
 
 When running large stress tests, your script can't assume anything about the HTTP response. 
 Often performance tests are written with a "happy path" in mind.
@@ -91,14 +93,28 @@ let checkRes = check(res, {
 });
 ```
 
+## Additional k6 flags to achieve better performance
+
+### --compatibility-mode=base
+
+If you are pushing the limits of the hardware, this is the most important k6 setting you can enable.
 
 
 
-## Add k6 flags to achieve better performance
+1. edit main.js (or symlink it)
+2. npm run-script webpack
+3. Your script is in build/script.es5.js
+
 
 ### --no-thresholds --no-summary 
 
-k6_new_executors run -o cloud --vus=20000 --duration=10m --compatibility-mode=base --no-thresholds --no-summary scripts/website.es5.js
+If you are running a cloud test with loacal execution (`k6 run -o cloud`), you may want to disable the terminal summary and local threshold calculation because thresholds and summary will be displayed in the cloud. 
+This will save you some memory and CPU cycles.
+
+
+
+Here aer all the mentioned flags, all in one:
+k6 run -o cloud --vus=20000 --duration=10m --compatibility-mode=base --no-thresholds --no-summary scripts/website.es5.js
 
 ![image](https://user-images.githubusercontent.com/442646/80499911-d408ab80-896d-11ea-83ad-a4f22adccd75.png)
 
@@ -349,6 +365,9 @@ k6 can upload a large amount data in a very short period of time. Make sure you 
 [Outbound Data Transfer is expensive in AWS EC2](https://www.cloudmanagementinsider.com/data-transfer-costs-everything-you-need-to-know/). The price ranges between 0.08 to 0.20 per GB depending on the region. 
 If you use the cheapest region the cost is about $0.080 per GB. Uploading 1TB therefore costs about $80. Long running test can cost several hundreds of dollars in data transfer alone.
 
+
+### spot instances are much cheaper.
+TODO
 
 # Script preparation
 
