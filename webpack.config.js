@@ -1,12 +1,9 @@
 var path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var webpack = require('webpack');
-const args = process.argv.slice(2);
-const fileName = args[0];
 
- module.exports = {
+module.exports = {
      mode: "production",
-     entry: fileName,
      output: {
          path: path.resolve(__dirname, 'build'),
          libraryTarget: "commonjs",
@@ -38,6 +35,6 @@ const fileName = args[0];
          colors: true
      },
      target: "web",
-         externals: /k6(\/.*)?/,
+         externals: /^k6(\/.*)?/,
      devtool: 'source-map'
- };
+};
