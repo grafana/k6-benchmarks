@@ -208,9 +208,13 @@ Setup:
 
 The "website.js" test file tries to use many different k6 features. It used plenty of custom metrics, checks, parametrization, thresholds and groups. It's a heavy test that should represent well the "real life" use case.
 
-# AWS m5.large server
+NOTE: the test.k6.io is a PHP website, not optimized for performance. 
+
+### AWS m5.large server
 
 The `m5.large` instance has 8GB of RAM and 2 CPU cores. 
+
+`sleep(5)`
 
 The following command was used to execute the test
 `k6 run -o cloud --vus=6000 --duration=10m --compatibility-mode=base --no-thresholds --no-summary -e TEST_NAME="AWS EC2 m5.large" scripts/website.es5.js`
@@ -220,254 +224,53 @@ Results
 - Memory used: 6.09 GB  (out of 8.0)
 - CPU load (avg): 1.49 (out of 2.0). 
 - Peak RPS: ~6000 (note, this test was not optimized for RPS).
-- Average RPS: 1.4k
 https://app.k6.io/runs/720172
 
-# AWS m5.4xlarge
+### AWS m5.4xlarge
 The `m5.4xlarge` instance has 64GB of RAM and 16 CPU cores.
 https://app.k6.io/runs/720179
 
-k6 run -o cloud --vus=20000 --duration=10m --compatibility-mode=base --no-thresholds --no-summary -e TEST_NAME="AWS EC2 m5.4xlarge website test" scripts/website.es5.js 
+`k6 run -o cloud --vus=20000 --duration=10m --compatibility-mode=base --no-thresholds --no-summary -e TEST_NAME="AWS EC2 m5.4xlarge website test" scripts/website.es5.js`
 
 Results
-- Maximum VUS reached: 20 000
-- Memory used: 6.09 GB  (out of 61.4)
-- CPU load (avg): 1.49 (out of 16.0). 
-- Peak RPS: ~6000 (note, this test was not optimized for RPS).
-- Average RPS: 1.4k
-https://app.k6.io/runs/720172
-
-# AWS m5.24xlarge
-The m5.25xlarge has 384GB of RAM and 96 CPU cores.
+- Maximum VUS reached: 20.000
+- Memory used: 20.1 GB  (out of 61.4)
+- CPU load (avg): 8.5 (out of 16.0). 
+- Peak RPS: ~20.000 (note, this test was not optimized for RPS).
+- `sleep(5)` (in both places)
 
 
+### AWS m5.24xlarge
+The m5.24xlarge has 384GB of RAM and 96 CPU cores.
+NOTE: sleep has been reduced to 1s instead of 3s to produce more requests.
 
+`k6 run -o cloud --vus=30000 --duration=5m --compatibility-mode=base --no-thresholds --no-summary -e TEST_NAME="AWS EC2 m5.24xlarge website test" scripts/website.es5.js`
 
-## CPU and memory consumption
+Results
+- Maximum VUS reached: 20.000
+- Memory used: XXX GB  (out of 370 available)
+- CPU load (avg): XXX (out of 96.0). 
+- Peak RPS: ~61.500.
+- `sleep(1)` (in both places)
 
+## Testing for RPS.
 
-#### k6_0.26.2 run -o cloud --vus=20000 --duration=10m --compatibility-mode=base scripts/website.es5.js
+As stated at the beginning, k6 can produce a lot of requests very quickly. 
 
-```shell
-root@m5-4xlarge:/home/ubuntu# while sleep 10; do ps -p `pidof k6` -o %cpu,%mem; done
-%CPU %MEM
- 698 31.8
-%CPU %MEM
- 695 31.8
-%CPU %MEM
- 691 32.0
-%CPU %MEM
- 689 32.0
-%CPU %MEM
- 688 32.0
-%CPU %MEM
- 686 32.0
-%CPU %MEM
- 686 32.0
-%CPU %MEM
- 685 32.0
-%CPU %MEM
- 682 32.0
-%CPU %MEM
- 680 32.0
-%CPU %MEM
- 673 32.4
-%CPU %MEM
- 672 32.4
-%CPU %MEM
- 671 32.4
-%CPU %MEM
- 670 32.4
-%CPU %MEM
- 668 32.4
-%CPU %MEM
- 665 32.4
-%CPU %MEM
- 660 32.4
-%CPU %MEM
- 658 32.4
-%CPU %MEM
- 656 32.4
-%CPU %MEM
- 656 32.4
-%CPU %MEM
- 654 32.7
-%CPU %MEM
- 649 32.7
-%CPU %MEM
- 647 32.7
-%CPU %MEM
- 647 32.7
-%CPU %MEM
- 646 32.7
-%CPU %MEM
- 642 32.7
-%CPU %MEM
- 640 32.7
-%CPU %MEM
- 639 32.7
-%CPU %MEM
- 637 32.7
-%CPU %MEM
- 633 32.7
-%CPU %MEM
- 632 32.7
-%CPU %MEM
- 631 32.7
-%CPU %MEM
- 627 32.7
-%CPU %MEM
- 626 33.1
-%CPU %MEM
- 625 33.1
-%CPU %MEM
- 624 33.1
-%CPU %MEM
- 620 33.1
-```
+### AWS m5.24xlarge
 
-#### k6_new_executors run -o cloud --vus=20000 --duration=10m --compatibility-mode=base scripts/website.es5.js
+Results
+- Maximum VUS reached: 30.000
+- Memory used: 24 GB  (out of 370 available)
+- CPU load (avg): 80 (out of 96.0). 
+- Peak RPS: ~188.500.
 
-```shell
-root@m5-4xlarge:/home/ubuntu# while sleep 10; do ps -p `pidof k6_new_executors` -o %cpu,%mem; done
-%CPU %MEM
- 930 27.8
-%CPU %MEM
- 899 27.9
-%CPU %MEM
- 871 28.0
-%CPU %MEM
- 850 28.2
-%CPU %MEM
- 832 28.3
-%CPU %MEM
- 819 28.5
-%CPU %MEM
- 805 28.6
-%CPU %MEM
- 794 28.6
-%CPU %MEM
- 786 29.2
-%CPU %MEM
- 777 29.2
-%CPU %MEM
- 768 29.5
-%CPU %MEM
- 761 29.5
-%CPU %MEM
- 754 29.5
-%CPU %MEM
- 748 29.7
-%CPU %MEM
- 743 29.8
-%CPU %MEM
- 739 29.8
-%CPU %MEM
- 734 29.8
-%CPU %MEM
- 731 29.8
-%CPU %MEM
- 727 29.8
-%CPU %MEM
- 724 29.8
-%CPU %MEM
- 721 29.8
-%CPU %MEM
- 718 29.8
-%CPU %MEM
- 714 29.8
-%CPU %MEM
- 709 29.9
-%CPU %MEM
- 700 29.9
-%CPU %MEM
- 697 29.9
-%CPU %MEM
- 693 29.9
-%CPU %MEM
- 691 29.9
-%CPU %MEM
- 688 29.9
-%CPU %MEM
- 684 29.9
-%CPU %MEM
- 677 30.1
-%CPU %MEM
- 675 30.1
-%CPU %MEM
- 673 30.1
-%CPU %MEM
- 671 30.1
-%CPU %MEM
- 669 30.1
-%CPU %MEM
- 662 30.1
-%CPU %MEM
- 660 30.1
-%CPU %MEM
- 658 30.1
-%CPU %MEM
- 657 30.1
-%CPU %MEM
- 650 30.1
-%CPU %MEM
- 648 30.6
-%CPU %MEM
- 647 30.7
-%CPU %MEM
- 645 30.7
-%CPU %MEM
- 639 30.7
-%CPU %MEM
- 638 30.7
-%CPU %MEM
- 637 30.7
-%CPU %MEM
- 632 30.7
-%CPU %MEM
- 630 30.7
-%CPU %MEM
- 629 30.7
-%CPU %MEM
- 628 30.7
-%CPU %MEM
- 623 30.7
-%CPU %MEM
- 622 30.7
-%CPU %MEM
- 621 30.7
-%CPU %MEM
- 617 30.8
-%CPU %MEM
- 616 30.8
-%CPU %MEM
- 615 30.8
-%CPU %MEM
- 610 30.8
-%CPU %MEM
- 603 30.8
-%CPU %MEM
- 594 30.8
-%CPU %MEM
- 586 30.8
-
-```
+56. CPU
+24. GB
+188k RPS. 
 
 
 
-
-#### AWS m5.large
-m5.large has 8GB of Ram and 2 CPU cores.
-
-The website.es5.js script can be executed with 6000VUs at about 5.5GB memory and 0.7 CPU load. 
-
-`k6 run -o cloud --vus=6000 --duration=10m --compatibility-mode=base scripts/website.es5.js `
-
-Sample test-run: https://app.k6.io/runs/public/dd48df93cfaa4c3dbd74ac205c6686d3
-
-#### AWS m5.4xlarge
-
-![image](https://user-images.githubusercontent.com/442646/80501377-a886c080-896f-11ea-95b8-ecdab853485d.png)
 
 
 #### File upload - data stress testing.
@@ -492,10 +295,21 @@ If you use the cheapest region the cost is about $0.080 per GB. Uploading 1TB th
 ### spot instances are much cheaper.
 TODO
 
-# Script preparation
+
+# Old notes below
+-------------------------------------
 
 
-1. edit main.js (or symlink it)
-2. npm run-script webpack
-3. Your script is in build/script.es5.js
+#### AWS m5.large
+m5.large has 8GB of Ram and 2 CPU cores.
+
+The website.es5.js script can be executed with 6000VUs at about 5.5GB memory and 0.7 CPU load. 
+
+`k6 run -o cloud --vus=6000 --duration=10m --compatibility-mode=base scripts/website.es5.js `
+
+Sample test-run: https://app.k6.io/runs/public/dd48df93cfaa4c3dbd74ac205c6686d3
+
+#### AWS m5.4xlarge
+
+![image](https://user-images.githubusercontent.com/442646/80501377-a886c080-896f-11ea-95b8-ecdab853485d.png)
 
