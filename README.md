@@ -184,7 +184,7 @@ The AWS EC2 instances are relatively cheap. Even the largest instance we have us
 Tip: it's often possible to launch "spot instances" of the same hardware for 10-20% of the cost. 
 
 
-### Errors
+## Errors
 
 If you run into errors during the execution, it's good to understand if they were caused by the load-generator or by the failing SUT. 
 
@@ -277,9 +277,13 @@ Results
 
 ## Testing for RPS.
 
-As stated at the beginning, k6 can produce a lot of requests very quickly. 
+As stated at the beginning, k6 can produce a lot of requests very quickly, especially if the target system responds quickly.
+Unfortunately our `test.k6.io` target system is rather slow PHP app. Nevertheless using 30k VUs we have reached 188.000 RPS. 
+Much higher numbers are possible for faster systems.
 
 ### AWS m5.24xlarge
+
+`k6 run -o cloud --vus=30000 --duration=1m --compatibility-mode=base --no-thresholds --no-summary -e TEST_NAME="AWS EC2 m5.24xlarge RPS test" scripts/RPS-optimized.es5.js`
 
 Results
 - Maximum VUS reached: 30.000
@@ -289,22 +293,33 @@ Results
 
 https://app.k6.io/runs/720216
 
+## Testing for data transfer
+
+k6 can utilize the available network bandwith when uploading files, but it needs plenty of memory to do so. 
+
+Please read the warning above about the cost of data transfer in AWS.
 
 
-## File upload - data stress testing.
+### AWS m5.24xlarge
+
+We have executed this test for only 1 minute to minimize the data-transfer costs. In 1 minute, k6 managed to transfer 36 GB of data with 1000 VUs. 
+
+`k6 run -o cloud --vus=1000 --duration=1m --compatibility-mode=base --no-thresholds --no-summary -e TEST_NAME="AWS EC2 m5.24xlarge file upload" scripts/file-upload.es5.js`
 
 Results
 - Maximum VUS reached: 1.000
 - Memory used: 81 GB  (out of 370 available)
 - CPU load (avg): 9 (out of 96.0). 
 - Network throughput reached *4.7Gbit/s*
+- Data transferred: 36GB.
+
+Note: each VU in k6 is comletely independent, and therefore it has its own memory. 1000VUs uploading 26MB file need as much as 81GB of RAM. 
 
 https://app.k6.io/runs/720228
 
 
-
-# Old notes below
 -------------------------------------
+# Old notes below
 
 
 #### AWS m5.large
