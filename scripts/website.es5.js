@@ -273,7 +273,7 @@
         },
         ext: {
             loadimpact: {
-                name: "EC2 Hardware Testing",
+                name: "".concat(__ENV.TEST_NAME) || "EC2 Hardware Testing",
                 projectID: 3478725
             }
         }

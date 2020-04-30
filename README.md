@@ -118,10 +118,10 @@ Use it like this:
 2. `cd k6-hardware-benchmark`
 3. `yarn install`
 4. `yarn run to-es5 someplace/yourscript.js`
-5. Your ES5.1 script is in `build/script.es5.js`
+5. Your ES5.1 script is in `someplace/yourscript.es5.js`
 
 Once your script is transpiled run it like this:
-`k6 run -o cloud --compatibility-mode=base scripts/your_script.es5.js`
+`k6 run -o cloud --compatibility-mode=base someplace/yourscript.es5.js`
 
 ### --no-thresholds --no-summary 
 

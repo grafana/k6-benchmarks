@@ -9,11 +9,6 @@ let checkFailureRate = new Rate("check_failure_rate");
 let timeToFirstByte = new Trend("time_to_first_byte", true);
 
 export let options = {
-    // specify on the command line.
-    // stages: [
-    //     { target: 6000, duration: "1m" },
-    //     { target: 6000, duration: "15m" },
-    // ],
     thresholds: {
         "http_req_duration": ["p(95)<500"],
         "http_req_duration{staticAsset:yes}": ["p(95)<100"],
@@ -21,7 +16,7 @@ export let options = {
     },
     ext: {
         loadimpact: {
-            name: "EC2 Hardware Testing",
+            name: `${__ENV.TEST_NAME}` || "AWS EC2 Hardware Testing",
             projectID: 3478725,
         }
     }
