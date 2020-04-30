@@ -1,7 +1,7 @@
 {
-  "name": "k6-es6",
+  "name": "k6-to-es5",
   "version": "1.0.0",
-  "description": "test project for k6 to use es6 through the power of babel and webpack",
+  "description": "Transpile es6+ scripts to es5.1 for k6",
   "main": "main.js",
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -13,13 +13,12 @@
     "webpack-cli": "^3.3.2"
   },
   "scripts": {
-    "webpack": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "to-es5": "webpack"
   },
   "keywords": [
     "k6"
   ],
-  "author": "Mihail Stoykov",
+  "author": "k6 team",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",

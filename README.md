@@ -97,28 +97,48 @@ let checkRes = check(res, {
 
 ### --compatibility-mode=base
 
+This setting disables the internal babel transpilation between ES6 to ES5 and inclusion of core.js.
+
 If you are pushing the limits of the hardware, this is the most important k6 setting you can enable.
 
 
+*Some background:*
 
-1. edit main.js (or symlink it)
-2. npm run-script webpack
-3. Your script is in build/script.es5.js
+> k6 at its core executes ECMAScript 5.1 code. Most k6 script examples and documentation is written in ECMAScript 6+. 
+> When k6 gets ES6+ code as an input, it transpiles it to ES5.1 using babel and loads corejs to enable commonly used APIs.
+> This works very well for 99% of use cases, but it adds significant overheard with large tests.
 
+To get the best performance out of k6, it's best transpile the scripts outside of k6 using webpack.
+
+In this repository we have prepared an efficient transpilation scheme that produces performant ES5.1 output for k6. 
+
+Use it like this:
+
+1. `git clone https://github.com/loadimpact/k6-hardware-benchmark/`
+2. `cd k6-hardware-benchmark`
+3. `yarn install`
+4. `yarn run to-es5 someplace/yourscript.js`
+5. Your ES5.1 script is in `build/script.es5.js`
+
+Once your script is transpiled run it like this:
+`k6 run -o cloud --compatibility-mode=base scripts/your_script.es5.js`
 
 ### --no-thresholds --no-summary 
 
-If you are running a cloud test with loacal execution (`k6 run -o cloud`), you may want to disable the terminal summary and local threshold calculation because thresholds and summary will be displayed in the cloud. 
+If you are running a cloud test with local execution (`k6 run -o cloud`), you may want to disable the terminal summary and local threshold calculation because thresholds and summary will be displayed in the cloud. 
 This will save you some memory and CPU cycles.
 
 
-
-Here aer all the mentioned flags, all in one:
+Here are all the mentioned flags, all in one:
 k6 run -o cloud --vus=20000 --duration=10m --compatibility-mode=base --no-thresholds --no-summary scripts/website.es5.js
 
 ![image](https://user-images.githubusercontent.com/442646/80499911-d408ab80-896d-11ea-83ad-a4f22adccd75.png)
 
 
+
+### Benchmark results.
+
+In this 
 
 ## CPU and memory consumption
 

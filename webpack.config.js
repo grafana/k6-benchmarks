@@ -1,11 +1,12 @@
- var path = require('path');
- const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-
- var webpack = require('webpack');
+var path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var webpack = require('webpack');
+const args = process.argv.slice(2);
+const fileName = args[0];
 
  module.exports = {
      mode: "production",
-     entry: './main.js',
+     entry: fileName,
      output: {
          path: path.resolve(__dirname, 'build'),
          libraryTarget: "commonjs",
