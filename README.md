@@ -93,6 +93,21 @@ let checkRes = check(res, {
 });
 ```
 
+### Monitor the load-generator server
+
+iftop htop
+memor
+
+
+### Remove unnecessary checks, groups and custom metrics
+
+This is the last resort 
+If you are trying to squeeze more performance out of the hardware, you can consider removing checks, 
+
+
+### reduce iterations. 
+
+
 ## Additional k6 flags to achieve better performance
 
 ### --compatibility-mode=base
@@ -123,6 +138,18 @@ Use it like this:
 Once your script is transpiled run it like this:
 `k6 run -o cloud --compatibility-mode=base someplace/yourscript.es5.js`
 
+### discardResponseBodies
+
+You can tell k6 to not process the body of the response by setting `discardResponseBodies` in the options object like this:
+```
+export let options = {
+	discardResponseBodies: true,
+};
+```
+k6 by default loads the response body of the request into memory. This causes much higher memory consumption
+If you are retrieving website data or static assets, 
+
+
 ### --no-thresholds --no-summary 
 
 If you are running a cloud test with local execution (`k6 run -o cloud`), you may want to disable the terminal summary and local threshold calculation because thresholds and summary will be displayed in the cloud. 
@@ -135,10 +162,86 @@ k6 run -o cloud --vus=20000 --duration=10m --compatibility-mode=base --no-thresh
 ![image](https://user-images.githubusercontent.com/442646/80499911-d408ab80-896d-11ea-83ad-a4f22adccd75.png)
 
 
+### Errors
 
-### Benchmark results.
+If you run into errors during the execution, it's good to understand if they were caused by the load-generator or by the failing SUT. 
 
-In this 
+#### read: connection reset by peer
+
+Error similar to this one is caused by the target system resetting the TCP connection. This happens when the Load balancer or the server itself isn't able to handle the traffic.
+
+```
+WARN[0013] Request Failed                                error="Get http://test.k6.io: read tcp 172.31.72.209:35288->63.32.205.136:80: read: connection reset by peer"
+```
+
+#### context deadline exceeded
+
+Error like this happens when k6 was able to send a request, but the target system didn't respond in time. The default timeout in k6 is 60 seconds. If your system doesn't produce the response in this timeframe, this error will appear.
+
+```
+WARN[0064] Request Failed                                error="Get http://test.k6.io: context deadline exceeded"
+```
+
+#### dial tcp 52.18.24.222:80: i/o timeout
+
+This is a similar error to the one above, but in this case k6 wasn't even able to make a request. The target system isn't able to establish a connection.
+```
+WARN[0057] Request Failed                                error="Get http://pawel.staging.loadimpact.com/static/logo.svg?url=v3: dial tcp 52.18.24.222:80: i/o timeout"
+```
+
+
+Note: you should decide what level of errors is acceptable. At large scale some errors are always present.
+If you make 5.000.000 requests with 50 failures, this is genrally a good result (0.0001% errors).
+
+
+
+# Benchmarking k6 on AWS hardware
+
+## Real-life test of a website.
+
+Setup:
+- All tests were executed on AWS EC2 instances
+- The "discardResponseBodies" recommendatio was NOT used. (results would be better with this setting).
+- Scripts used for testing are available in the `/scripts` directory. The results are reproducible
+- k6 0.26.2 was used 
+- Note: the target system (test.k6.io) was pre-scaled for performance before the test. 
+
+The "website.js" test file tries to use many different k6 features. It used plenty of custom metrics, checks, parametrization, thresholds and groups. It's a heavy test that should represent well the "real life" use case.
+
+# AWS m5.large server
+
+The `m5.large` instance has 8GB of RAM and 2 CPU cores. 
+
+The following command was used to execute the test
+`k6 run -o cloud --vus=6000 --duration=10m --compatibility-mode=base --no-thresholds --no-summary -e TEST_NAME="AWS EC2 m5.large" scripts/website.es5.js`
+
+Results
+- Maximum VUS reached: 6000
+- Memory used: 6.09 GB  (out of 8.0)
+- CPU load (avg): 1.49 (out of 2.0). 
+- Peak RPS: ~6000 (note, this test was not optimized for RPS).
+- Average RPS: 1.4k
+https://app.k6.io/runs/720172
+
+# AWS m5.4xlarge
+The `m5.4xlarge` instance has 64GB of RAM and 16 CPU cores.
+https://app.k6.io/runs/720179
+
+k6 run -o cloud --vus=20000 --duration=10m --compatibility-mode=base --no-thresholds --no-summary -e TEST_NAME="AWS EC2 m5.4xlarge website test" scripts/website.es5.js 
+
+Results
+- Maximum VUS reached: 20 000
+- Memory used: 6.09 GB  (out of 61.4)
+- CPU load (avg): 1.49 (out of 16.0). 
+- Peak RPS: ~6000 (note, this test was not optimized for RPS).
+- Average RPS: 1.4k
+https://app.k6.io/runs/720172
+
+# AWS m5.24xlarge
+The m5.25xlarge has 384GB of RAM and 96 CPU cores.
+
+
+
 
 ## CPU and memory consumption
 
