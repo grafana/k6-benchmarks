@@ -2,12 +2,17 @@ var path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var webpack = require('webpack');
 
+const args = process.argv.slice(2);
+const fileName = args[0];
+const outFilename = path.basename(fileName, path.extname(fileName))+'.es5.js';
+
 module.exports = {
-     mode: "production",
-     output: {
-         path: path.resolve(__dirname, 'build'),
+    mode: "production",
+    entry: fileName,
+    output: {
+         path: path.resolve(path.dirname(fileName)),
          libraryTarget: "commonjs",
-         filename: 'script.es5.js'
+         filename: outFilename
      },
      optimization: {
         minimizer: [
