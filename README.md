@@ -136,7 +136,7 @@ yarn run to-es5 someplace/yourscript.js
 Once your script is transpiled run it like this:
 `k6 run -o cloud --compatibility-mode=base someplace/yourscript.es5.js`
 
-k6 will use about 50% of memory in comparison to running the original script. It will laos reduce the CPU load. 
+k6 will use about 50% of memory in comparison to running the original script. It will also reduce the CPU load. 
 
 ### discardResponseBodies
 
