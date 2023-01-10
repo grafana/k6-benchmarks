@@ -37,8 +37,7 @@ let loginData = {
 
 export default function() {
     group("Front page", function() {
-        let res = http.get("http://test.k6.io/?ts=" + Math.round(randomIntBetween(1,2000)), { tags: { name: "http://test.k6.io/?ts=*"}});
-
+        let res = http.get(http.url`http://test.k6.io/?ts=${Math.round(randomIntBetween(1,2000))}`, { tags: { name: "http://test.k6.io/?ts=*"}});
 
         let checkRes = check(res, {
             "Homepage body size is 11026 bytes": (r) => r.status === 200 && r.body.length === 11026,
