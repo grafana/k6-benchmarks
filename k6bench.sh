@@ -23,7 +23,7 @@ cleanup() {
 # than this to return a response.
 sint="${K6_BENCH_SAMPLE_INTERVAL:-5}"
 
-k6 run "$@" >/dev/null 2>&1 &
+k6 run "$@" >k6out.txt 2>&1 &
 k6pid="$!"
 
 # Run the collection processes in parallel to avoid blocking.
