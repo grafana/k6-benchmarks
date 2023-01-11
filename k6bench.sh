@@ -29,7 +29,7 @@ k6pid="$!"
 # Run the collection processes in parallel to avoid blocking.
 # For details see https://stackoverflow.com/a/68316571
 
-echo "Time(s),CPU(%),RAM(kB),VUs,RPS"
+echo '"Time (s)","CPU (%)","RAM (kB)","VUs","RPS"'
 while true; do
   etimes=$(ps -p "$k6pid" --no-headers -o etimes | awk '{ print $1 }')
   pids=()
