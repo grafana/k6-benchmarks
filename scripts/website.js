@@ -30,7 +30,7 @@ function randomIntBetween(min, max) { // min and max included
 let loginData = {
   "users": [
     { "username": "admin", "password": "123" },
-    { "username": "test", "password": "1234" },
+    { "username": "test_user", "password": "1234" },
     { "username": "invaliduser", "password": "password"}
   ]
 };
