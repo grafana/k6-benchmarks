@@ -37,7 +37,7 @@ let loginData = {
 
 export default function() {
   group("Front page", function() {
-    let res = http.get(http.url`http://test.staging.k6.io:8080/?ts=${Math.round(randomIntBetween(1,2000))}`, { tags: { name: "http://test.staging.k6.io:8080/?ts=*"}});
+    let res = http.get(http.url`https://test-k6-io-temp.k6.io/?ts=${Math.round(randomIntBetween(1,2000))}`, { tags: { name: "https://test-k6-io-temp.k6.io/?ts=*"}});
 
     let checkRes = check(res, {
       "Homepage body size is 11026 bytes": (r) => r.status === 200 && r.body.length === 11026,
@@ -50,8 +50,8 @@ export default function() {
 
     group("Static assets", function() {
       let res = http.batch([
-        ["GET", "http://test.staging.k6.io:8080/static/css/site.css", {}, { tags: { staticAsset: "yes" } }],
-        ["GET", "http://test.staging.k6.io:8080/static/js/prisms.js", {}, { tags: { staticAsset: "yes" } }]
+        ["GET", "https://test-k6-io-temp.k6.io/static/css/site.css", {}, { tags: { staticAsset: "yes" } }],
+        ["GET", "https://test-k6-io-temp.k6.io/static/js/prisms.js", {}, { tags: { staticAsset: "yes" } }]
       ]);
       checkRes = check(res[0], {
         "Is stylesheet 4859 bytes?": (r) => r.status === 200 && r.body.length === 4859,
@@ -69,7 +69,7 @@ export default function() {
   sleep(5);
 
   group("Login", function() {
-    let res = http.get("http://test.staging.k6.io:8080/my_messages.php");
+    let res = http.get("https://test-k6-io-temp.k6.io/my_messages.php");
     let checkRes = check(res, {
       "Users should not be auth'd. Is unauthorized header present?": (r) => r.status === 200 && r.body.indexOf("Unauthorized") !== -1
     });
@@ -80,7 +80,7 @@ export default function() {
     let position = Math.floor(Math.random()*loginData.users.length);
     let credentials = loginData.users[position];
 
-    res = http.post("http://test.staging.k6.io:8080/login.php", { login: credentials.username, password: credentials.password, redir: '1' });
+    res = http.post("https://test-k6-io-temp.k6.io/login.php", { login: credentials.username, password: credentials.password, redir: '1' });
     checkRes = check(res, {
       "is logged in welcome header present": (r) => r.status === 200 && r.body.indexOf("Welcome, admin!") !== -1
     });
