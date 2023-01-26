@@ -40,7 +40,7 @@ export default function() {
     let res = http.get(http.url`http://test.k6.io/?ts=${Math.round(randomIntBetween(1,2000))}`, { tags: { name: "http://test.k6.io/?ts=*"}});
 
     let checkRes = check(res, {
-      "Homepage body size is 11026 bytes": (r) => r.status === 200 && r.body.length === 11026,
+      "Homepage body size is 11278 bytes": (r) => r.status === 200 && r.body.length === 11278,
       "Homepage welcome header present": (r) => r.status === 200 && r.body.indexOf("Welcome to the k6.io demo site!") !== -1
     });
 
