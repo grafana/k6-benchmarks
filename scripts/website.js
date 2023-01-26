@@ -7,6 +7,7 @@ import { Counter, Rate, Trend } from "k6/metrics";
 let successfulLogins = new Counter("successful_logins");
 let checkFailureRate = new Rate("check_failure_rate");
 let timeToFirstByte = new Trend("time_to_first_byte", true);
+const baseURL = 'https://test-k6-io-temp.k6.io';
 
 export let options = {
   thresholds: {
@@ -37,7 +38,7 @@ let loginData = {
 
 export default function() {
   group("Front page", function() {
-    let res = http.get(http.url`https://test-k6-io-temp.k6.io/?ts=${Math.round(randomIntBetween(1,2000))}`, { tags: { name: "https://test-k6-io-temp.k6.io/?ts=*"}});
+    let res = http.get(http.url`${baseURL}/?ts=${Math.round(randomIntBetween(1,2000))}`, { tags: { name: `${baseURL}/?ts=*`}});
 
     let checkRes = check(res, {
       "Homepage body size is 11278 bytes": (r) => r.status === 200 && r.body.length === 11278,
@@ -50,8 +51,8 @@ export default function() {
 
     group("Static assets", function() {
       let res = http.batch([
-        ["GET", "https://test-k6-io-temp.k6.io/static/css/site.css", {}, { tags: { staticAsset: "yes" } }],
-        ["GET", "https://test-k6-io-temp.k6.io/static/js/prisms.js", {}, { tags: { staticAsset: "yes" } }]
+        ["GET", `${baseURL}/static/css/site.css`, {}, { tags: { staticAsset: "yes" } }],
+        ["GET", `${baseURL}/static/js/prisms.js`, {}, { tags: { staticAsset: "yes" } }]
       ]);
       checkRes = check(res[0], {
         "Is stylesheet 4859 bytes?": (r) => r.status === 200 && r.body.length === 4859,
@@ -69,7 +70,7 @@ export default function() {
   sleep(5);
 
   group("Login", function() {
-    let res = http.get("https://test-k6-io-temp.k6.io/my_messages.php");
+    let res = http.get(`${baseURL}/my_messages.php`);
     let checkRes = check(res, {
       "Users should not be auth'd. Is unauthorized header present?": (r) => r.status === 200 && r.body.indexOf("Unauthorized") !== -1
     });
@@ -81,7 +82,7 @@ export default function() {
     let credentials = loginData.users[position];
     const csrftoken = res.cookies.csrf && res.cookies.csrf.length && res.cookies.csrf[0].value;
 
-    res = http.post("https://test-k6-io-temp.k6.io/login.php", {
+    res = http.post(`${baseURL}/login.php`, {
       login: credentials.username,
       password: credentials.password,
       csrftoken: csrftoken,
