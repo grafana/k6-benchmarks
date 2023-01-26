@@ -79,8 +79,14 @@ export default function() {
 
     let position = Math.floor(Math.random()*loginData.users.length);
     let credentials = loginData.users[position];
+    const csrftoken = res.cookies.csrf && res.cookies.csrf.length && res.cookies.csrf[0].value;
 
-    res = http.post("https://test-k6-io-temp.k6.io/login.php", { login: credentials.username, password: credentials.password, redir: '1' });
+    res = http.post("https://test-k6-io-temp.k6.io/login.php", {
+      login: credentials.username,
+      password: credentials.password,
+      csrftoken: csrftoken,
+      redir: '1',
+    });
     checkRes = check(res, {
       "is logged in welcome header present": (r) => r.status === 200 && r.body.indexOf("Welcome, admin!") !== -1
     });
