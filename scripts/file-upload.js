@@ -16,6 +16,6 @@ export let options = {
 };
 
 export default function() {
-  var res = http.post("https://pawel.staging.loadimpact.com/my_messages.php", data);
+  var res = http.post("http://test.staging.k6.io/my_messages.php", data);
   sleep(1);
 }

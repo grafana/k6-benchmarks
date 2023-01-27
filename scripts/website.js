@@ -4,7 +4,7 @@ import http from "k6/http";
 import { check, group, sleep } from "k6";
 import { Counter, Rate, Trend } from "k6/metrics";
 
-const baseURL = 'http://test.k6.io';
+const baseURL = 'http://test.staging.k6.io';
 const sleepTime = __ENV.SLEEP || 3;
 
 let successfulLogins = new Counter("successful_logins");
