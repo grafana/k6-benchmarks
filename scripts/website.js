@@ -7,7 +7,7 @@ import { Counter, Rate, Trend } from "k6/metrics";
 let successfulLogins = new Counter("successful_logins");
 let checkFailureRate = new Rate("check_failure_rate");
 let timeToFirstByte = new Trend("time_to_first_byte", true);
-const baseURL = 'https://test-k6-io-temp.k6.io';
+const baseURL = 'http://test.staging.k6.io';
 
 export let options = {
   thresholds: {
