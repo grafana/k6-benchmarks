@@ -4,10 +4,12 @@ import http from "k6/http";
 import { check, group, sleep } from "k6";
 import { Counter, Rate, Trend } from "k6/metrics";
 
+const baseURL = 'http://test.k6.io';
+const sleepTime = __ENV.SLEEP || 3;
+
 let successfulLogins = new Counter("successful_logins");
 let checkFailureRate = new Rate("check_failure_rate");
 let timeToFirstByte = new Trend("time_to_first_byte", true);
-const baseURL = 'http://test.k6.io';
 
 export let options = {
   thresholds: {
@@ -68,7 +70,7 @@ export default function() {
 
   });
 
-  sleep(5);
+  sleep(sleepTime);
 
   group("Login", function() {
     let res = http.get(`${baseURL}/my_messages.php`);
@@ -105,5 +107,5 @@ export default function() {
     timeToFirstByte.add(res.timings.waiting, { ttfbURL: res.url });
   });
 
-  sleep(5);
+  sleep(sleepTime);
 }
