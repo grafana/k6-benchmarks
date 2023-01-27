@@ -15,11 +15,10 @@ export let options = {
     "http_req_duration{staticAsset:yes}": ["p(95)<100"],
     "check_failure_rate": ["rate<0.3"]
   },
-
   ext: {
     loadimpact: {
-      name: `${__ENV.TEST_NAME}` || "AWS EC2 Hardware Testing",
-      projectID: 3478725,
+      projectID: 3624575,
+      name: __ENV.TEST_NAME || "AWS EC2 Hardware Testing",
     }
   }
 };
