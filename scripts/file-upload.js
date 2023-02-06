@@ -2,17 +2,17 @@ import http from "k6/http";
 import { sleep } from "k6";
 
 var data = {
-    file: http.file(open("./26MB.zip", "b"), "26MB.zip")
+  file: http.file(open("./26MB.zip", "b"), "26MB.zip")
 };
 
 export let options = {
-	discardResponseBodies: true,
-    ext: {
-        loadimpact: {
-            name: `${__ENV.TEST_NAME}` || "Data transfer test",
-            projectID: 3478725,
-        }
+  discardResponseBodies: true,
+  ext: {
+    loadimpact: {
+      name: `${__ENV.TEST_NAME}` || "Data transfer test",
+      projectID: 3478725,
     }
+  }
 };
 
 export default function() {
