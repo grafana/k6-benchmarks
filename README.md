@@ -41,3 +41,8 @@ Results of tested k6 versions are available in the [/results](/results) director
 - ["Running large tests" guide](https://k6.io/docs/testing-guides/running-large-tests/): learn about some ways to improve k6 performance, error troubleshooting, and more.
 
 - ["Fine tuning OS" guide](https://k6.io/docs/misc/fine-tuning-os): learn about different operating system configuration tweaks to make sure k6 runs optimally.
+
+
+## License
+
+[ISC](/LICENSE)
