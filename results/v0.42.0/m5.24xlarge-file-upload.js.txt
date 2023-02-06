@@ -1,0 +1,874 @@
+
+          /\      |‾‾| /‾‾/   /‾‾/   
+     /\  /  \     |  |/  /   /  /    
+    /  \/    \    |     (   /   ‾‾\  
+   /          \   |  |\  \ |  (‾)  | 
+  / __________ \  |__| \__\ \_____/ .io
+
+  execution: local
+     script: scripts/file-upload.js
+     output: -
+
+  scenarios: (100.00%) 1 scenario, 1000 max VUs, 1m30s max duration (incl. graceful stop):
+           * default: 1000 looping VUs for 1m0s (gracefulStop: 30s)
+
+
+Init      [   2% ] 0024/1000 VUs initialized
+default   [   0% ]
+
+Init      [  18% ] 0177/1000 VUs initialized
+default   [   0% ]
+
+Init      [  21% ] 0214/1000 VUs initialized
+default   [   0% ]
+
+Init      [  35% ] 0354/1000 VUs initialized
+default   [   0% ]
+
+Init      [  38% ] 0384/1000 VUs initialized
+default   [   0% ]
+
+Init      [  48% ] 0485/1000 VUs initialized
+default   [   0% ]
+
+Init      [  61% ] 0607/1000 VUs initialized
+default   [   0% ]
+
+Init      [  68% ] 0678/1000 VUs initialized
+default   [   0% ]
+
+Init      [  77% ] 0766/1000 VUs initialized
+default   [   0% ]
+
+Init      [  83% ] 0830/1000 VUs initialized
+default   [   0% ]
+
+Init      [  93% ] 0931/1000 VUs initialized
+default   [   0% ]
+
+running (0m00.5s), 1000/1000 VUs, 0 complete and 0 interrupted iterations
+default   [   1% ] 1000 VUs  0m00.5s/1m0s
+
+running (0m01.6s), 1000/1000 VUs, 0 complete and 0 interrupted iterations
+default   [   3% ] 1000 VUs  0m01.6s/1m0s
+
+running (0m02.5s), 1000/1000 VUs, 0 complete and 0 interrupted iterations
+default   [   4% ] 1000 VUs  0m02.5s/1m0s
+
+running (0m03.5s), 1000/1000 VUs, 10 complete and 0 interrupted iterations
+default   [   6% ] 1000 VUs  0m03.5s/1m0s
+
+running (0m04.5s), 1000/1000 VUs, 20 complete and 0 interrupted iterations
+default   [   8% ] 1000 VUs  0m04.5s/1m0s
+time="2023-02-03T17:21:02Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40466->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:02Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38806->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:02Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36906->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:02Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2078->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:02Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": EOF"
+time="2023-02-03T17:21:03Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": EOF"
+time="2023-02-03T17:21:03Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38112->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:03Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41674->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:03Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36226->54.72.166.184:80: write: connection reset by peer"
+
+running (0m05.5s), 1000/1000 VUs, 45 complete and 0 interrupted iterations
+default   [   9% ] 1000 VUs  0m05.5s/1m0s
+
+running (0m06.5s), 1000/1000 VUs, 81 complete and 0 interrupted iterations
+default   [  11% ] 1000 VUs  0m06.5s/1m0s
+
+running (0m07.5s), 1000/1000 VUs, 97 complete and 0 interrupted iterations
+default   [  13% ] 1000 VUs  0m07.5s/1m0s
+
+running (0m08.5s), 1000/1000 VUs, 129 complete and 0 interrupted iterations
+default   [  14% ] 1000 VUs  0m08.5s/1m0s
+
+running (0m09.5s), 1000/1000 VUs, 153 complete and 0 interrupted iterations
+default   [  16% ] 1000 VUs  0m09.5s/1m0s
+
+running (0m10.5s), 1000/1000 VUs, 192 complete and 0 interrupted iterations
+default   [  18% ] 1000 VUs  0m10.5s/1m0s
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2414->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:42620->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41806->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40550->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40352->54.72.166.184:80: write: connection reset by peer"
+
+running (0m11.5s), 1000/1000 VUs, 232 complete and 0 interrupted iterations
+default   [  19% ] 1000 VUs  0m11.5s/1m0s
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2306->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38330->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38242->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38004->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37656->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:09Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35726->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:10Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35154->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:10Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m12.5s), 1000/1000 VUs, 302 complete and 0 interrupted iterations
+default   [  21% ] 1000 VUs  0m12.5s/1m0s
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2560->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": EOF"
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4116->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41220->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36162->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3674->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": EOF"
+
+running (0m13.5s), 1000/1000 VUs, 369 complete and 0 interrupted iterations
+default   [  23% ] 1000 VUs  0m13.5s/1m0s
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:11Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:12Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m14.5s), 1000/1000 VUs, 455 complete and 0 interrupted iterations
+default   [  24% ] 1000 VUs  0m14.5s/1m0s
+time="2023-02-03T17:21:12Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:12Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:13Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m15.5s), 1000/1000 VUs, 555 complete and 0 interrupted iterations
+default   [  26% ] 1000 VUs  0m15.5s/1m0s
+time="2023-02-03T17:21:13Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:13Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:14Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m16.5s), 1000/1000 VUs, 621 complete and 0 interrupted iterations
+default   [  28% ] 1000 VUs  0m16.5s/1m0s
+time="2023-02-03T17:21:14Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4134->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:14Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3492->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:14Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2266->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:14Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:1868->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:15Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:42500->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:15Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:15Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39540->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:15Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38862->54.72.166.184:80: write: connection reset by peer"
+
+running (0m17.5s), 1000/1000 VUs, 695 complete and 0 interrupted iterations
+default   [  29% ] 1000 VUs  0m17.5s/1m0s
+time="2023-02-03T17:21:15Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:15Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:16Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:10190->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:16Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4154->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:16Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2918->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:16Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:42516->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:16Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41584->54.72.166.184:80: write: connection reset by peer"
+
+running (0m18.5s), 1000/1000 VUs, 791 complete and 0 interrupted iterations
+default   [  31% ] 1000 VUs  0m18.5s/1m0s
+time="2023-02-03T17:21:16Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:17Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:17Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:11648->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:17Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40286->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:17Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:8706->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:17Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4002->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:17Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:34394->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:17Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36324->54.72.166.184:80: write: connection reset by peer"
+
+running (0m19.5s), 1000/1000 VUs, 879 complete and 0 interrupted iterations
+default   [  33% ] 1000 VUs  0m19.5s/1m0s
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:1674->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2668->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41974->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41338->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38594->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:34252->54.72.166.184:80: write: connection reset by peer"
+
+running (0m20.5s), 1000/1000 VUs, 951 complete and 0 interrupted iterations
+default   [  34% ] 1000 VUs  0m20.5s/1m0s
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:1630->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39156->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39114->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38730->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:18Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:34176->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:19Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:19Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m21.5s), 1000/1000 VUs, 1044 complete and 0 interrupted iterations
+default   [  36% ] 1000 VUs  0m21.5s/1m0s
+time="2023-02-03T17:21:19Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:19Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:9574->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": EOF"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m22.5s), 1000/1000 VUs, 1146 complete and 0 interrupted iterations
+default   [  38% ] 1000 VUs  0m22.5s/1m0s
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:42434->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:34512->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:14388->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:20Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:21Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:21Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": EOF"
+
+running (0m23.5s), 1000/1000 VUs, 1244 complete and 0 interrupted iterations
+default   [  39% ] 1000 VUs  0m23.5s/1m0s
+time="2023-02-03T17:21:21Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:13102->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:12318->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3640->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3124->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:12106->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38758->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:42258->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:34406->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m24.5s), 1000/1000 VUs, 1333 complete and 0 interrupted iterations
+default   [  41% ] 1000 VUs  0m24.5s/1m0s
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:9904->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38970->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:22Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:23Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:23Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m25.5s), 1000/1000 VUs, 1437 complete and 0 interrupted iterations
+default   [  43% ] 1000 VUs  0m25.5s/1m0s
+time="2023-02-03T17:21:23Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m26.5s), 1000/1000 VUs, 1524 complete and 0 interrupted iterations
+default   [  44% ] 1000 VUs  0m26.5s/1m0s
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3918->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2222->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41246->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38840->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35418->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3260->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:24Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m27.5s), 1000/1000 VUs, 1626 complete and 0 interrupted iterations
+default   [  46% ] 1000 VUs  0m27.5s/1m0s
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4082->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:25Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:26Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:26Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:26Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m28.5s), 1000/1000 VUs, 1751 complete and 0 interrupted iterations
+default   [  48% ] 1000 VUs  0m28.5s/1m0s
+time="2023-02-03T17:21:26Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:26Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:26Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m29.5s), 1000/1000 VUs, 1845 complete and 0 interrupted iterations
+default   [  49% ] 1000 VUs  0m29.5s/1m0s
+time="2023-02-03T17:21:28Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:28Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m30.5s), 1000/1000 VUs, 1926 complete and 0 interrupted iterations
+default   [  51% ] 1000 VUs  0m30.5s/1m0s
+time="2023-02-03T17:21:28Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:28Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:28Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:28Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:13306->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:12068->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41728->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m31.5s), 1000/1000 VUs, 2066 complete and 0 interrupted iterations
+default   [  53% ] 1000 VUs  0m31.5s/1m0s
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:29Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m32.5s), 1000/1000 VUs, 2162 complete and 0 interrupted iterations
+default   [  54% ] 1000 VUs  0m32.5s/1m0s
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:5462->54.72.166.184:80: read: connection reset by peer"
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:7762->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3002->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:30Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:10276->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:31Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m33.5s), 1000/1000 VUs, 2237 complete and 0 interrupted iterations
+default   [  56% ] 1000 VUs  0m33.5s/1m0s
+time="2023-02-03T17:21:31Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:32Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m34.5s), 1000/1000 VUs, 2313 complete and 0 interrupted iterations
+default   [  58% ] 1000 VUs  0m34.5s/1m0s
+time="2023-02-03T17:21:32Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:32Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:32Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:33Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:33Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:35874->54.72.166.184:80: read: connection reset by peer"
+time="2023-02-03T17:21:33Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4428->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:33Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35260->54.72.166.184:80: write: connection reset by peer"
+
+running (0m35.5s), 1000/1000 VUs, 2405 complete and 0 interrupted iterations
+default   [  59% ] 1000 VUs  0m35.5s/1m0s
+time="2023-02-03T17:21:33Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:33Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:33Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:34Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:34Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m36.5s), 1000/1000 VUs, 2518 complete and 0 interrupted iterations
+default   [  61% ] 1000 VUs  0m36.5s/1m0s
+time="2023-02-03T17:21:34Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:34Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:34Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:34Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:34Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:35Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:35Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m37.5s), 1000/1000 VUs, 2618 complete and 0 interrupted iterations
+default   [  63% ] 1000 VUs  0m37.5s/1m0s
+time="2023-02-03T17:21:35Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:35Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:36Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:36Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:36Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:36Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m38.5s), 1000/1000 VUs, 2729 complete and 0 interrupted iterations
+default   [  64% ] 1000 VUs  0m38.5s/1m0s
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m39.5s), 1000/1000 VUs, 2801 complete and 0 interrupted iterations
+default   [  66% ] 1000 VUs  0m39.5s/1m0s
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3040->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:1636->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41012->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:36450->54.72.166.184:80: read: connection reset by peer"
+time="2023-02-03T17:21:37Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35202->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3688->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41034->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41068->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:8350->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37522->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4616->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35010->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m40.5s), 1000/1000 VUs, 2918 complete and 0 interrupted iterations
+default   [  68% ] 1000 VUs  0m40.5s/1m0s
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:38Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:39Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:39Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:39Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:39Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m41.5s), 1000/1000 VUs, 3043 complete and 0 interrupted iterations
+default   [  69% ] 1000 VUs  0m41.5s/1m0s
+time="2023-02-03T17:21:39Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4758->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:14586->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:13816->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:12740->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:4594->54.72.166.184:80: read: connection reset by peer"
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37350->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40388->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36588->54.72.166.184:80: write: connection reset by peer"
+
+running (0m42.5s), 1000/1000 VUs, 3115 complete and 0 interrupted iterations
+default   [  71% ] 1000 VUs  0m42.5s/1m0s
+time="2023-02-03T17:21:40Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:41Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:41Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m43.5s), 1000/1000 VUs, 3200 complete and 0 interrupted iterations
+default   [  73% ] 1000 VUs  0m43.5s/1m0s
+time="2023-02-03T17:21:41Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41696->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:41Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35966->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:41Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39300->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:41Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:41Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:41Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m44.5s), 1000/1000 VUs, 3273 complete and 0 interrupted iterations
+default   [  74% ] 1000 VUs  0m44.5s/1m0s
+time="2023-02-03T17:21:42Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:43Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:43Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m45.5s), 1000/1000 VUs, 3342 complete and 0 interrupted iterations
+default   [  76% ] 1000 VUs  0m45.5s/1m0s
+time="2023-02-03T17:21:44Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:44Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4246->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:44Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:15462->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:44Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:13936->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:44Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:8846->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:44Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:59838->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:44Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:40524->54.72.166.184:80: read: connection reset by peer"
+time="2023-02-03T17:21:44Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35082->54.72.166.184:80: write: connection reset by peer"
+
+running (0m46.5s), 1000/1000 VUs, 3425 complete and 0 interrupted iterations
+default   [  78% ] 1000 VUs  0m46.5s/1m0s
+time="2023-02-03T17:21:44Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:59444->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41716->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41956->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3480->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4110->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35478->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m47.5s), 1000/1000 VUs, 3512 complete and 0 interrupted iterations
+default   [  79% ] 1000 VUs  0m47.5s/1m0s
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:45Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:61054->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37702->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36474->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:11418->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:60842->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m48.5s), 1000/1000 VUs, 3644 complete and 0 interrupted iterations
+default   [  81% ] 1000 VUs  0m48.5s/1m0s
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:46Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2844->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:13006->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:6180->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3146->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:59568->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40928->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3274->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41506->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37268->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40268->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36846->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:61580->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:13718->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:13210->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41524->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:61058->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39660->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2626->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39378->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m49.5s), 1000/1000 VUs, 3742 complete and 0 interrupted iterations
+default   [  83% ] 1000 VUs  0m49.5s/1m0s
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:15440->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:60294->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3234->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40690->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:62686->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:47Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:9052->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:61442->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:11766->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:60324->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:60212->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40730->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:8024->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:62842->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38326->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:7348->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39708->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:7914->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:62442->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36328->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37848->54.72.166.184:80: write: connection reset by peer"
+
+running (0m50.5s), 1000/1000 VUs, 3866 complete and 0 interrupted iterations
+default   [  84% ] 1000 VUs  0m50.5s/1m0s
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:60850->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37984->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:37610->54.72.166.184:80: read: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39978->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:48Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m51.5s), 1000/1000 VUs, 4007 complete and 0 interrupted iterations
+default   [  86% ] 1000 VUs  0m51.5s/1m0s
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39016->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:62038->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:61176->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38666->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:60604->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:59970->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:49Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m52.5s), 1000/1000 VUs, 4112 complete and 0 interrupted iterations
+default   [  88% ] 1000 VUs  0m52.5s/1m0s
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:60470->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:7672->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:65128->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37024->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41314->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:6196->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:14548->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37854->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41834->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:50Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:34706->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:1236->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:12832->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36842->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:35622->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m53.5s), 1000/1000 VUs, 4238 complete and 0 interrupted iterations
+default   [  89% ] 1000 VUs  0m53.5s/1m0s
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:51Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:1522->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:62438->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39870->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:1998->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:2268->54.72.166.184:80: read: connection reset by peer"
+
+running (0m54.5s), 1000/1000 VUs, 4353 complete and 0 interrupted iterations
+default   [  91% ] 1000 VUs  0m54.5s/1m0s
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:52Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m55.5s), 1000/1000 VUs, 4461 complete and 0 interrupted iterations
+default   [  93% ] 1000 VUs  0m55.5s/1m0s
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2332->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38480->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36648->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37862->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:63430->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:14096->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2494->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:60520->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2588->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40786->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:41714->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:59738->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:6384->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:42632->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38504->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:7558->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:65408->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:1316->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:42646->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36060->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40040->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:53Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m56.5s), 1000/1000 VUs, 4578 complete and 0 interrupted iterations
+default   [  94% ] 1000 VUs  0m56.5s/1m0s
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:15156->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:42670->54.72.166.184:80: read: connection reset by peer"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:6008->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2604->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4826->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:3880->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:37872->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:54Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m57.5s), 1000/1000 VUs, 4682 complete and 0 interrupted iterations
+default   [  96% ] 1000 VUs  0m57.5s/1m0s
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38548->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:5672->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:7720->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:1690->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:38598->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40260->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:14058->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:55Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (0m58.5s), 1000/1000 VUs, 4810 complete and 0 interrupted iterations
+default   [  98% ] 1000 VUs  0m58.5s/1m0s
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:56Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:62024->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:13056->54.72.166.184:80: write: connection reset by peer"
+
+running (0m59.5s), 1000/1000 VUs, 4921 complete and 0 interrupted iterations
+default   [  99% ] 1000 VUs  0m59.5s/1m0s
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:6958->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:39046->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40780->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+time="2023-02-03T17:21:57Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (1m00.5s), 0963/1000 VUs, 5017 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+time="2023-02-03T17:21:59Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": dial tcp 54.72.166.184:80: connect: connection refused"
+
+running (1m01.5s), 0879/1000 VUs, 5101 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+time="2023-02-03T17:21:59Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:7238->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:5866->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:14950->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:2256->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40798->54.72.166.184:80: write: connection reset by peer"
+
+running (1m02.5s), 0782/1000 VUs, 5198 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:63648->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:64364->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:64932->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:9490->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:63436->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:36504->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:10054->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:62298->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:61296->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:59678->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:4330->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:34450->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:00Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:40556->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:01Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:9026->54.72.166.184:80: read: connection reset by peer"
+time="2023-02-03T17:22:01Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": read tcp 172.31.25.83:12422->54.72.166.184:80: read: connection reset by peer"
+time="2023-02-03T17:22:01Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:60288->54.72.166.184:80: write: broken pipe"
+time="2023-02-03T17:22:01Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:61010->54.72.166.184:80: write: connection reset by peer"
+
+running (1m03.5s), 0683/1000 VUs, 5297 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+time="2023-02-03T17:22:02Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:63634->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:02Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:9466->54.72.166.184:80: write: connection reset by peer"
+
+running (1m04.5s), 0568/1000 VUs, 5412 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+time="2023-02-03T17:22:02Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:8226->54.72.166.184:80: write: connection reset by peer"
+time="2023-02-03T17:22:02Z" level=warning msg="Request Failed" error="Post \"http://test.staging.k6.io/my_messages.php\": write tcp 172.31.25.83:63348->54.72.166.184:80: write: connection reset by peer"
+
+running (1m05.5s), 0479/1000 VUs, 5501 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m06.5s), 0389/1000 VUs, 5591 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m07.5s), 0289/1000 VUs, 5691 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m08.5s), 0208/1000 VUs, 5772 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m09.5s), 0170/1000 VUs, 5810 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m10.5s), 0140/1000 VUs, 5840 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m11.5s), 0115/1000 VUs, 5865 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m12.5s), 0083/1000 VUs, 5897 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m13.5s), 0067/1000 VUs, 5913 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m14.5s), 0048/1000 VUs, 5932 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m15.5s), 0029/1000 VUs, 5951 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m16.5s), 0015/1000 VUs, 5965 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m17.5s), 0007/1000 VUs, 5973 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m18.5s), 0004/1000 VUs, 5976 complete and 0 interrupted iterations
+default ↓ [ 100% ] 1000 VUs  1m0s
+
+running (1m19.5s), 0000/1000 VUs, 5980 complete and 0 interrupted iterations
+default ✓ [ 100% ] 1000 VUs  1m0s
+
+     data_received..................: 2.9 MB 36 kB/s
+     data_sent......................: 99 GB  1.2 GB/s
+     http_req_blocked...............: avg=32.09ms  min=0s      med=26.33ms max=1.79s   p(90)=33.15ms p(95)=61.21ms 
+     http_req_connecting............: avg=28.48ms  min=0s      med=26.16ms max=1.05s   p(90)=31.82ms p(95)=44.83ms 
+     http_req_duration..............: avg=4.54s    min=0s      med=65.97µs max=50.83s  p(90)=20.59s  p(95)=26.75s  
+       { expected_response:true }...: avg=16.16s   min=669.4ms med=15.84s  max=50.83s  p(90)=32.84s  p(95)=36.7s   
+     http_req_failed................: 83.01% ✓ 4964      ✗ 1016  
+     http_req_receiving.............: avg=81.85µs  min=0s      med=55.32µs max=16.34ms p(90)=83.75µs p(95)=105.17µs
+     http_req_sending...............: avg=3.73s    min=0s      med=0s      max=42.76s  p(90)=16.75s  p(95)=23.39s  
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s      max=0s      p(90)=0s      p(95)=0s      
+     http_req_waiting...............: avg=809.37ms min=0s      med=0s      max=19.09s  p(90)=2.84s   p(95)=6.2s    
+     http_reqs......................: 5980   75.218191/s
+     iteration_duration.............: avg=10.73s   min=1.03s   med=8.03s   max=52.57s  p(90)=24.11s  p(95)=28.9s   
+     iterations.....................: 5980   75.218191/s
+     vus............................: 4      min=0       max=1000
+     vus_max........................: 1000   min=24      max=1000
+
