@@ -36,6 +36,10 @@ All scripts are run against a large-scale deployment of a simple test PHP site m
 
 Results of tested k6 versions are available in the [/results](/results) directory. You can find the raw data, graphs and result explanations in each subdirectory.
 
+## Usage
+
+See the [Usage document](/docs/usage.md) for information about setting up the environment, and commands to run the benchmarks.
+
 ## Related
 
 - ["Running large tests" guide](https://k6.io/docs/testing-guides/running-large-tests/): learn about some ways to improve k6 performance, error troubleshooting, and more.
